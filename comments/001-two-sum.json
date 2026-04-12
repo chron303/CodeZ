@@ -1,0 +1,27 @@
+{
+  "id": "001",
+  "intuition": "We need two numbers that sum to target. The brute force checks every pair in O(n²). The insight is: for each number x, we just need to know if (target - x) exists anywhere in the array. A hash map gives us that lookup in O(1).",
+  "approach": "Walk through the array once. For each element, compute its complement (target - element). Check if the complement is already in our hash map. If yes, we found our pair. If no, store the current element and its index in the map and continue.",
+  "walkthrough": [
+    "nums = [2, 7, 11, 15], target = 9",
+    "i=0: complement = 9-2 = 7. map is empty. store {2:0}",
+    "i=1: complement = 9-7 = 2. 2 is in map at index 0! Return [0, 1]"
+  ],
+  "complexity": {
+    "time": "O(n) — single pass through the array",
+    "space": "O(n) — hash map stores up to n elements"
+  },
+  "hints": [
+    "Start with brute force O(n²) — what makes it slow?",
+    "You're repeatedly searching for a value — what data structure gives O(1) lookup?",
+    "For each element x, you need to find (target - x). Store what you've seen so far."
+  ],
+  "commonMistakes": [
+    "Using the same element twice: always check that the complement's index ≠ current index",
+    "Returning indices in wrong order: map stores [value → index], return [map[complement], i]",
+    "Forgetting to handle duplicate values like [3,3] — storing index i not i-1"
+  ],
+  "relatedProblems": ["003", "018"],
+  "author": "arnav-goel",
+  "contributed": "2026-04-12"
+}

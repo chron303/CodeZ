@@ -1,0 +1,38 @@
+name: Validate & Index Problems
+
+on:
+  pull_request:
+    paths:
+      - 'problems/**'
+      - 'solutions/**'
+      - 'comments/**'
+  push:
+    branches: [main]
+    paths:
+      - 'problems/**'
+      - 'solutions/**'
+      - 'comments/**'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Validate all files
+        run: node scripts/validate.js
+
+      # Only runs on merge to main — rebuilds and commits the index
+      - name: Commit updated index
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add problems.index.json
+          git diff --staged --quiet || git commit -m "chore: rebuild problems index [skip ci]"
+          git push
