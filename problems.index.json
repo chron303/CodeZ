@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-04-12T05:54:19.727Z",
+  "count": 2,
+  "problems": [
+    {
+      "id": "001",
+      "number": 1,
+      "title": "Two Sum",
+      "topic": "Arrays",
+      "difficulty": "Easy",
+      "tags": [
+        "array",
+        "hash-map"
+      ],
+      "author": "arnav-goel",
+      "hasSolution": {
+        "cpp": true,
+        "python": false,
+        "java": false
+      },
+      "hasComment": true
+    },
+    {
+      "id": "002",
+      "number": 2,
+      "title": "Best Time to Buy and Sell Stock",
+      "topic": "Arrays",
+      "difficulty": "Easy",
+      "tags": [
+        "array",
+        "greedy"
+      ],
+      "author": "arnav-goel",
+      "hasSolution": {
+        "cpp": false,
+        "python": false,
+        "java": false
+      },
+      "hasComment": false
+    }
+  ]
+}
