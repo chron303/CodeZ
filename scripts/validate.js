@@ -130,10 +130,13 @@ problemFiles.sort().forEach(function(file) {
   if (data) {
     problems.push(data);
     problemIds.push(data.id);
+    // Use actual filename as slug source (strip "001-" prefix and ".json")
+    var fileSlug = file.replace(/^\d{3}-/, '').replace(/\.json$/, '');
     index.push({
       id:         data.id,
       number:     data.number,
       title:      data.title,
+      slug:       fileSlug,
       topic:      data.topic,
       difficulty: data.difficulty,
       tags:       data.tags || [],
