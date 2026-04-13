@@ -1,0 +1,28 @@
+{
+  "slug": "two-sum",
+  "title": "Two Sum",
+  "topic": "Arrays",
+  "difficulty": "Easy",
+  "description": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.\n\nYou may assume that each input would have exactly one solution, and you may not use the same element twice.",
+  "url": "https://leetcode.com/problems/two-sum/",
+  "tags": ["array", "hash-map"],
+  "examples": [
+    {
+      "input": "nums = [2,7,11,15], target = 9",
+      "output": "[0,1]",
+      "explanation": "nums[0] + nums[1] = 2 + 7 = 9, so return [0, 1]."
+    },
+    {
+      "input": "nums = [3,2,4], target = 6",
+      "output": "[1,2]"
+    }
+  ],
+  "testCases": [
+    { "label": "Basic",        "input": "[[2,7,11,15],9]", "stdinLines": "4\n2 7 11 15\n9", "expected": "[0,1]",  "hidden": false },
+    { "label": "Non-adjacent", "input": "[[3,2,4],6]",     "stdinLines": "3\n3 2 4\n6",     "expected": "[1,2]",  "hidden": false },
+    { "label": "Duplicates",   "input": "[[3,3],6]",       "stdinLines": "2\n3 3\n6",       "expected": "[0,1]",  "hidden": false },
+    { "label": "Negatives",    "input": "[[-1,-2,-3,-4,-5],-8]", "stdinLines": "5\n-1 -2 -3 -4 -5\n-8", "expected": "[2,4]", "hidden": true }
+  ],
+  "author": "chron303",
+  "contributed": "2026-04-12"
+}
