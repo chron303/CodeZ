@@ -1,0 +1,28 @@
+{
+  "slug": "maximum-subarray",
+  "title": "Maximum Subarray",
+  "topic": "Arrays",
+  "difficulty": "Medium",
+  "description": "Given an integer array nums, find the subarray with the largest sum, and return its sum.\n\nA subarray is a contiguous non-empty sequence of elements within an array.",
+  "url": "https://leetcode.com/problems/maximum-subarray/",
+  "tags": ["array", "dynamic-programming", "divide-and-conquer"],
+  "examples": [
+    {
+      "input": "nums = [-2,1,-3,4,-1,2,1,-5,4]",
+      "output": "6",
+      "explanation": "The subarray [4,-1,2,1] has the largest sum 6."
+    },
+    {
+      "input": "nums = [1]",
+      "output": "1"
+    }
+  ],
+  "testCases": [
+    { "label": "Standard",      "input": "[-2,1,-3,4,-1,2,1,-5,4]", "stdinLines": "9\n-2 1 -3 4 -1 2 1 -5 4", "expected": "6",     "hidden": false },
+    { "label": "Single",        "input": "[1]",                      "stdinLines": "1\n1",                       "expected": "1",     "hidden": false },
+    { "label": "All negative",  "input": "[-1,-2,-3]",               "stdinLines": "3\n-1 -2 -3",                "expected": "-1",    "hidden": false },
+    { "label": "All positive",  "input": "[5,4,-1,7,8]",             "stdinLines": "5\n5 4 -1 7 8",              "expected": "23",    "hidden": true }
+  ],
+  "author": "chron303",
+  "contributed": "2026-04-23"
+}

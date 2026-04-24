@@ -1,0 +1,28 @@
+{
+  "slug": "reverse-linked-list",
+  "title": "Reverse Linked List",
+  "topic": "Linked Lists",
+  "difficulty": "Easy",
+  "description": "Given the head of a singly linked list, reverse the list, and return the reversed list.\n\nInput is given as a space-separated list of integers. Output the reversed list as space-separated integers.",
+  "url": "https://leetcode.com/problems/reverse-linked-list/",
+  "tags": ["linked-list", "recursion"],
+  "examples": [
+    {
+      "input": "head = [1,2,3,4,5]",
+      "output": "5 4 3 2 1",
+      "explanation": "The reversed list is [5,4,3,2,1]."
+    },
+    {
+      "input": "head = [1,2]",
+      "output": "2 1"
+    }
+  ],
+  "testCases": [
+    { "label": "Standard",       "input": "[1,2,3,4,5]",  "stdinLines": "5\n1 2 3 4 5",  "expected": "5 4 3 2 1",  "hidden": false },
+    { "label": "Two elements",   "input": "[1,2]",        "stdinLines": "2\n1 2",        "expected": "2 1",         "hidden": false },
+    { "label": "Single element", "input": "[1]",          "stdinLines": "1\n1",          "expected": "1",           "hidden": true },
+    { "label": "Large list",     "input": "[1,2,3,4,5,6,7,8,9,10]", "stdinLines": "10\n1 2 3 4 5 6 7 8 9 10", "expected": "10 9 8 7 6 5 4 3 2 1", "hidden": true }
+  ],
+  "author": "chron303",
+  "contributed": "2026-04-23"
+}

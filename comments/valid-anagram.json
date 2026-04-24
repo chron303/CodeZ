@@ -1,0 +1,27 @@
+{
+  "id": "003",
+  "intuition": "Two strings are anagrams if they contain the exact same characters with the exact same frequencies. We can count character frequencies and compare them.",
+  "approach": "Use a hash map (or fixed-size array of 26 for lowercase letters) to count characters in s, then decrement for each character in t. If all counts are zero at the end, it's an anagram.",
+  "walkthrough": [
+    "s = \"anagram\", t = \"nagaram\"",
+    "Count s: {a:3, n:1, g:1, r:1, m:1}",
+    "Decrement for t: n→0, a→2, g→0, a→1, r→0, a→0, m→0",
+    "All counts are 0 → true"
+  ],
+  "complexity": {
+    "time": "O(n) — single pass through each string",
+    "space": "O(1) — at most 26 character counts"
+  },
+  "hints": [
+    "What uniquely defines an anagram? The character frequencies.",
+    "You could sort both strings and compare — but can you do better than O(n log n)?",
+    "A frequency counter array of size 26 lets you solve it in O(n) time."
+  ],
+  "commonMistakes": [
+    "Forgetting to check if the lengths differ — if lengths differ, they can't be anagrams.",
+    "Using a single counter and forgetting to decrement — increment for s, decrement for t."
+  ],
+  "relatedProblems": ["010"],
+  "author": "chron303",
+  "contributed": "2026-04-23"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "009",
+  "intuition": "Every opening bracket must be closed by the same type in the correct order. A stack naturally enforces this — push opening brackets, and for each closing bracket, check if the top of the stack matches.",
+  "approach": "Iterate through the string. If the character is an opening bracket, push it. If it's a closing bracket, check if the stack is non-empty and the top matches. If not, return false. After the loop, check if the stack is empty.",
+  "walkthrough": [
+    "s = \"{[]}\"",
+    "'{' → push. Stack: [{]",
+    "'[' → push. Stack: [{, []",
+    "']' → top is '[', matches. Pop. Stack: [{]",
+    "'}' → top is '{', matches. Pop. Stack: []",
+    "Stack empty → true"
+  ],
+  "complexity": {
+    "time": "O(n) — single pass through the string",
+    "space": "O(n) — stack can hold up to n/2 opening brackets"
+  },
+  "hints": [
+    "What data structure processes things in LIFO (last-in, first-out) order?",
+    "When you see a closing bracket, the most recent unmatched opening bracket must be its pair.",
+    "Don't forget to check that the stack is empty at the end — '(' alone is invalid."
+  ],
+  "commonMistakes": [
+    "Forgetting to check if the stack is empty before popping — a closing bracket with no matching open bracket.",
+    "Only checking counts of brackets — '([)]' has equal counts but is invalid.",
+    "Not checking if the stack is empty at the end — '(' has no closing bracket."
+  ],
+  "relatedProblems": [],
+  "author": "chron303",
+  "contributed": "2026-04-23"
+}

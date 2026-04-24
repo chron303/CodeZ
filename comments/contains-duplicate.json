@@ -1,0 +1,28 @@
+{
+  "id": "010",
+  "intuition": "If any element appears more than once, a set will have fewer elements than the array. Alternatively, insert elements into a set and check for duplicates during insertion.",
+  "approach": "Create a hash set. Iterate through the array — for each element, check if it's already in the set. If yes, return true. Otherwise, add it. If we finish without finding a duplicate, return false.",
+  "walkthrough": [
+    "nums = [1, 2, 3, 1]",
+    "i=0: 1 not in set. Add 1. Set: {1}",
+    "i=1: 2 not in set. Add 2. Set: {1, 2}",
+    "i=2: 3 not in set. Add 3. Set: {1, 2, 3}",
+    "i=3: 1 IS in set → return true"
+  ],
+  "complexity": {
+    "time": "O(n) — single pass",
+    "space": "O(n) — set stores up to n elements"
+  },
+  "hints": [
+    "What data structure allows O(1) lookup for 'have I seen this before?'",
+    "You could sort first (O(n log n)) and check adjacent elements, but hashing is faster.",
+    "Alternatively, compare set size vs array length."
+  ],
+  "commonMistakes": [
+    "Sorting the array and forgetting that it modifies the original — use a copy if needed.",
+    "Using nested loops for O(n²) — a set makes it O(n)."
+  ],
+  "relatedProblems": ["003"],
+  "author": "chron303",
+  "contributed": "2026-04-23"
+}

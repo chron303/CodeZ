@@ -1,0 +1,30 @@
+{
+  "id": "011",
+  "intuition": "The maximum depth is the longest path from root to a leaf. For any node, the depth is 1 + the maximum of the depths of its left and right subtrees. This naturally leads to recursion.",
+  "approach": "Use DFS recursion. Base case: if the node is null, return 0. Otherwise, return 1 + max(maxDepth(left), maxDepth(right)).",
+  "walkthrough": [
+    "tree = [3, 9, 20, null, null, 15, 7]",
+    "maxDepth(3) = 1 + max(maxDepth(9), maxDepth(20))",
+    "maxDepth(9) = 1 + max(0, 0) = 1",
+    "maxDepth(20) = 1 + max(maxDepth(15), maxDepth(7))",
+    "maxDepth(15) = 1, maxDepth(7) = 1",
+    "maxDepth(20) = 1 + max(1, 1) = 2",
+    "maxDepth(3) = 1 + max(1, 2) = 3"
+  ],
+  "complexity": {
+    "time": "O(n) — visit every node once",
+    "space": "O(h) — recursion stack depth equals tree height"
+  },
+  "hints": [
+    "Think recursively: what's the depth of a leaf? What about its parent?",
+    "The depth of a node is 1 plus the maximum depth of its children.",
+    "Base case: a null node has depth 0."
+  ],
+  "commonMistakes": [
+    "Returning 1 for null nodes instead of 0 — this adds an extra level.",
+    "Not handling the empty tree case (root is null → return 0)."
+  ],
+  "relatedProblems": ["012"],
+  "author": "chron303",
+  "contributed": "2026-04-23"
+}

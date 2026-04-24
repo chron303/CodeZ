@@ -1,0 +1,30 @@
+{
+  "id": "004",
+  "intuition": "To reverse a linked list, we need to flip the direction of every pointer. Instead of each node pointing to the next, it should point to the previous one. We can do this iteratively by maintaining a prev pointer.",
+  "approach": "Use three pointers: prev (starts null), curr (starts at head), next (temp). In each step, save curr.next, point curr.next to prev, advance prev to curr, and advance curr to the saved next. When curr is null, prev is the new head.",
+  "walkthrough": [
+    "list = 1 -> 2 -> 3 -> 4 -> 5",
+    "Step 1: prev=null, curr=1. Set 1.next=null. prev=1, curr=2",
+    "Step 2: prev=1, curr=2. Set 2.next=1. prev=2, curr=3",
+    "Step 3: prev=2, curr=3. Set 3.next=2. prev=3, curr=4",
+    "Step 4: prev=3, curr=4. Set 4.next=3. prev=4, curr=5",
+    "Step 5: prev=4, curr=5. Set 5.next=4. prev=5, curr=null",
+    "Return prev=5. Result: 5 -> 4 -> 3 -> 2 -> 1"
+  ],
+  "complexity": {
+    "time": "O(n) — single pass",
+    "space": "O(1) — only three pointers"
+  },
+  "hints": [
+    "You need to change where each node's 'next' pointer points.",
+    "Before changing curr.next, save the original next node so you don't lose the rest of the list.",
+    "Three pointers (prev, curr, next) are all you need."
+  ],
+  "commonMistakes": [
+    "Not saving curr.next before overwriting it — you lose access to the rest of the list.",
+    "Returning head instead of prev — the original head is now the tail."
+  ],
+  "relatedProblems": ["005"],
+  "author": "chron303",
+  "contributed": "2026-04-23"
+}

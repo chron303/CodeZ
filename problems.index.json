@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-21T08:28:12.108Z",
-  "count": 2,
+  "generatedAt": "2026-04-24T18:42:03.817Z",
+  "count": 12,
   "problems": [
     {
       "slug": "best-time-to-buy-and-sell-stock",
@@ -14,6 +14,101 @@
       "author": "chron303"
     },
     {
+      "slug": "binary-search",
+      "title": "Binary Search",
+      "topic": "Binary Search",
+      "difficulty": "Easy",
+      "tags": [
+        "array",
+        "binary-search"
+      ],
+      "author": "chron303"
+    },
+    {
+      "slug": "climbing-stairs",
+      "title": "Climbing Stairs",
+      "topic": "Dynamic Programming",
+      "difficulty": "Easy",
+      "tags": [
+        "dynamic-programming",
+        "math",
+        "memoization"
+      ],
+      "author": "chron303"
+    },
+    {
+      "slug": "contains-duplicate",
+      "title": "Contains Duplicate",
+      "topic": "Hashing",
+      "difficulty": "Easy",
+      "tags": [
+        "array",
+        "hash-map",
+        "sorting"
+      ],
+      "author": "chron303"
+    },
+    {
+      "slug": "invert-binary-tree",
+      "title": "Invert Binary Tree",
+      "topic": "Trees",
+      "difficulty": "Easy",
+      "tags": [
+        "tree",
+        "depth-first-search",
+        "breadth-first-search",
+        "recursion"
+      ],
+      "author": "chron303"
+    },
+    {
+      "slug": "maximum-depth-of-binary-tree",
+      "title": "Maximum Depth of Binary Tree",
+      "topic": "Trees",
+      "difficulty": "Easy",
+      "tags": [
+        "tree",
+        "depth-first-search",
+        "breadth-first-search",
+        "recursion"
+      ],
+      "author": "chron303"
+    },
+    {
+      "slug": "maximum-subarray",
+      "title": "Maximum Subarray",
+      "topic": "Arrays",
+      "difficulty": "Medium",
+      "tags": [
+        "array",
+        "dynamic-programming",
+        "divide-and-conquer"
+      ],
+      "author": "chron303"
+    },
+    {
+      "slug": "merge-two-sorted-lists",
+      "title": "Merge Two Sorted Lists",
+      "topic": "Linked Lists",
+      "difficulty": "Easy",
+      "tags": [
+        "linked-list",
+        "recursion"
+      ],
+      "author": "chron303"
+    },
+    {
+      "slug": "reverse-linked-list",
+      "title": "Reverse Linked List",
+      "topic": "Linked Lists",
+      "difficulty": "Easy",
+      "tags": [
+        "linked-list",
+        "recursion"
+      ],
+      "author": "chron303"
+    },
+    {
       "slug": "two-sum",
       "title": "Two Sum",
       "topic": "Arrays",
@@ -21,6 +116,29 @@
       "tags": [
         "array",
         "hash-map"
+      ],
+      "author": "chron303"
+    },
+    {
+      "slug": "valid-anagram",
+      "title": "Valid Anagram",
+      "topic": "Hashing",
+      "difficulty": "Easy",
+      "tags": [
+        "hash-map",
+        "string",
+        "sorting"
+      ],
+      "author": "chron303"
+    },
+    {
+      "slug": "valid-parentheses",
+      "title": "Valid Parentheses",
+      "topic": "Stacks",
+      "difficulty": "Easy",
+      "tags": [
+        "string",
+        "stack"
       ],
       "author": "chron303"
     }

@@ -1,0 +1,28 @@
+{
+  "slug": "invert-binary-tree",
+  "title": "Invert Binary Tree",
+  "topic": "Trees",
+  "difficulty": "Easy",
+  "description": "Given the root of a binary tree, invert the tree, and return its root.\n\nInverting a binary tree means swapping the left and right children of every node.\n\nInput is given as a level-order traversal with -1 representing null nodes. Output the level-order traversal of the inverted tree (excluding trailing nulls).",
+  "url": "https://leetcode.com/problems/invert-binary-tree/",
+  "tags": ["tree", "depth-first-search", "breadth-first-search", "recursion"],
+  "examples": [
+    {
+      "input": "root = [4,2,7,1,3,6,9]",
+      "output": "4 7 2 9 6 3 1",
+      "explanation": "The inverted tree swaps left and right children at every level."
+    },
+    {
+      "input": "root = [2,1,3]",
+      "output": "2 3 1"
+    }
+  ],
+  "testCases": [
+    { "label": "Full tree",    "input": "[4,2,7,1,3,6,9]",  "stdinLines": "7\n4 2 7 1 3 6 9",  "expected": "4 7 2 9 6 3 1",  "hidden": false },
+    { "label": "Small tree",   "input": "[2,1,3]",          "stdinLines": "3\n2 1 3",           "expected": "2 3 1",           "hidden": false },
+    { "label": "Single node",  "input": "[1]",              "stdinLines": "1\n1",               "expected": "1",               "hidden": true },
+    { "label": "Left heavy",   "input": "[1,2,3]",          "stdinLines": "3\n1 2 3",           "expected": "1 3 2",           "hidden": true }
+  ],
+  "author": "chron303",
+  "contributed": "2026-04-23"
+}

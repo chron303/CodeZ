@@ -1,0 +1,28 @@
+{
+  "slug": "maximum-depth-of-binary-tree",
+  "title": "Maximum Depth of Binary Tree",
+  "topic": "Trees",
+  "difficulty": "Easy",
+  "description": "Given the root of a binary tree, return its maximum depth.\n\nA binary tree's maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.\n\nInput is given as a level-order traversal with -1 representing null nodes. First line is the number of elements, second line is the elements.",
+  "url": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
+  "tags": ["tree", "depth-first-search", "breadth-first-search", "recursion"],
+  "examples": [
+    {
+      "input": "root = [3,9,20,-1,-1,15,7]",
+      "output": "3",
+      "explanation": "The tree has depth 3: root(3) -> right(20) -> left(15) or right(7)."
+    },
+    {
+      "input": "root = [1,-1,2]",
+      "output": "2"
+    }
+  ],
+  "testCases": [
+    { "label": "Standard",    "input": "[3,9,20,-1,-1,15,7]",  "stdinLines": "7\n3 9 20 -1 -1 15 7",  "expected": "3", "hidden": false },
+    { "label": "Left skewed", "input": "[1,-1,2]",             "stdinLines": "3\n1 -1 2",              "expected": "2", "hidden": false },
+    { "label": "Single node", "input": "[1]",                  "stdinLines": "1\n1",                   "expected": "1", "hidden": true },
+    { "label": "Balanced",    "input": "[1,2,3,4,5,6,7]",      "stdinLines": "7\n1 2 3 4 5 6 7",       "expected": "3", "hidden": true }
+  ],
+  "author": "chron303",
+  "contributed": "2026-04-23"
+}

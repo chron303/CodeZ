@@ -1,0 +1,28 @@
+{
+  "id": "012",
+  "intuition": "To invert a binary tree, swap the left and right children of every node. This can be done recursively — invert the children first, then swap them. Or swap first, then recurse — both work.",
+  "approach": "Use DFS recursion. Base case: if the node is null, return null. Otherwise, recursively invert left and right subtrees, then swap the node's left and right children. Return the node.",
+  "walkthrough": [
+    "tree = [4, 2, 7, 1, 3, 6, 9]",
+    "invert(4): swap children 2 and 7",
+    "  invert(7): swap children 6 and 9 → [9, 6]",
+    "  invert(2): swap children 1 and 3 → [3, 1]",
+    "Result: [4, 7, 2, 9, 6, 3, 1]"
+  ],
+  "complexity": {
+    "time": "O(n) — visit every node once",
+    "space": "O(h) — recursion stack depth equals tree height"
+  },
+  "hints": [
+    "What does 'invert' mean at a single node? Just swap left and right.",
+    "If you invert every node's children, the whole tree is inverted.",
+    "Think recursively: invert the subtrees, then swap them at the current node."
+  ],
+  "commonMistakes": [
+    "Only swapping the root's children without recursing — the subtrees stay un-inverted.",
+    "Forgetting the null base case — leads to null pointer errors."
+  ],
+  "relatedProblems": ["011"],
+  "author": "chron303",
+  "contributed": "2026-04-23"
+}

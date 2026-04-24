@@ -1,0 +1,28 @@
+{
+  "slug": "valid-anagram",
+  "title": "Valid Anagram",
+  "topic": "Hashing",
+  "difficulty": "Easy",
+  "description": "Given two strings s and t, return true if t is an anagram of s, and false otherwise.\n\nAn anagram is a word or phrase formed by rearranging the letters of a different word or phrase, using all the original letters exactly once.",
+  "url": "https://leetcode.com/problems/valid-anagram/",
+  "tags": ["hash-map", "string", "sorting"],
+  "examples": [
+    {
+      "input": "s = \"anagram\", t = \"nagaram\"",
+      "output": "true",
+      "explanation": "\"nagaram\" is an anagram of \"anagram\"."
+    },
+    {
+      "input": "s = \"rat\", t = \"car\"",
+      "output": "false"
+    }
+  ],
+  "testCases": [
+    { "label": "Basic anagram",  "input": "[\"anagram\",\"nagaram\"]", "stdinLines": "anagram\nnagaram",  "expected": "true",  "hidden": false },
+    { "label": "Not anagram",    "input": "[\"rat\",\"car\"]",        "stdinLines": "rat\ncar",          "expected": "false", "hidden": false },
+    { "label": "Single char",    "input": "[\"a\",\"a\"]",            "stdinLines": "a\na",              "expected": "true",  "hidden": false },
+    { "label": "Diff lengths",   "input": "[\"ab\",\"a\"]",           "stdinLines": "ab\na",             "expected": "false", "hidden": true }
+  ],
+  "author": "chron303",
+  "contributed": "2026-04-23"
+}

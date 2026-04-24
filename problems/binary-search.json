@@ -1,0 +1,29 @@
+{
+  "slug": "binary-search",
+  "title": "Binary Search",
+  "topic": "Binary Search",
+  "difficulty": "Easy",
+  "description": "Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.\n\nYou must write an algorithm with O(log n) runtime complexity.",
+  "url": "https://leetcode.com/problems/binary-search/",
+  "tags": ["array", "binary-search"],
+  "examples": [
+    {
+      "input": "nums = [-1,0,3,5,9,12], target = 9",
+      "output": "4",
+      "explanation": "9 exists in nums and its index is 4."
+    },
+    {
+      "input": "nums = [-1,0,3,5,9,12], target = 2",
+      "output": "-1",
+      "explanation": "2 does not exist in nums so return -1."
+    }
+  ],
+  "testCases": [
+    { "label": "Found",         "input": "[[-1,0,3,5,9,12],9]",  "stdinLines": "6\n-1 0 3 5 9 12\n9",  "expected": "4",  "hidden": false },
+    { "label": "Not found",     "input": "[[-1,0,3,5,9,12],2]",  "stdinLines": "6\n-1 0 3 5 9 12\n2",  "expected": "-1", "hidden": false },
+    { "label": "Single found",  "input": "[[5],5]",              "stdinLines": "1\n5\n5",               "expected": "0",  "hidden": false },
+    { "label": "First element", "input": "[[2,5],2]",            "stdinLines": "2\n2 5\n2",             "expected": "0",  "hidden": true }
+  ],
+  "author": "chron303",
+  "contributed": "2026-04-23"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "005",
+  "intuition": "Both lists are already sorted. We can build the merged list by always picking the smaller of the two current heads, like the merge step of merge sort.",
+  "approach": "Use a dummy head node. Compare the fronts of both lists, append the smaller one to the result, and advance that list's pointer. When one list is exhausted, append the remainder of the other.",
+  "walkthrough": [
+    "list1 = [1,2,4], list2 = [1,3,4]",
+    "Compare 1 vs 1: pick list1's 1. Result: [1]",
+    "Compare 2 vs 1: pick list2's 1. Result: [1,1]",
+    "Compare 2 vs 3: pick 2. Result: [1,1,2]",
+    "Compare 4 vs 3: pick 3. Result: [1,1,2,3]",
+    "Compare 4 vs 4: pick list1's 4. Result: [1,1,2,3,4]",
+    "list1 exhausted, append list2's remainder [4]. Result: [1,1,2,3,4,4]"
+  ],
+  "complexity": {
+    "time": "O(n + m) — each node visited once",
+    "space": "O(1) — we reuse existing nodes"
+  },
+  "hints": [
+    "Think of the merge step in merge sort.",
+    "Use a dummy node to simplify edge cases (empty list1 or list2).",
+    "After one list is exhausted, just link the rest of the other list."
+  ],
+  "commonMistakes": [
+    "Forgetting to handle the case where one or both lists are empty.",
+    "Creating new nodes instead of relinking existing ones — wastes space."
+  ],
+  "relatedProblems": ["004"],
+  "author": "chron303",
+  "contributed": "2026-04-23"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "006",
+  "intuition": "Kadane's algorithm: at each position, decide whether to extend the current subarray or start fresh. If the running sum becomes negative, it's better to start a new subarray from the current element.",
+  "approach": "Maintain currentSum and maxSum. For each element, set currentSum = max(nums[i], currentSum + nums[i]). Update maxSum = max(maxSum, currentSum). This greedily extends or restarts the subarray at each step.",
+  "walkthrough": [
+    "nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]",
+    "i=0: curr=max(-2, -2)=-2, max=-2",
+    "i=1: curr=max(1, -2+1)=1, max=1",
+    "i=2: curr=max(-3, 1-3)=-2, max=1",
+    "i=3: curr=max(4, -2+4)=4, max=4",
+    "i=4: curr=max(-1, 4-1)=3, max=4",
+    "i=5: curr=max(2, 3+2)=5, max=5",
+    "i=6: curr=max(1, 5+1)=6, max=6",
+    "i=7: curr=max(-5, 6-5)=1, max=6",
+    "i=8: curr=max(4, 1+4)=5, max=6",
+    "Answer: 6"
+  ],
+  "complexity": {
+    "time": "O(n) — single pass",
+    "space": "O(1) — two variables"
+  },
+  "hints": [
+    "Brute force checks all subarrays in O(n²). Can you do it in one pass?",
+    "At each index, you either extend the previous subarray or start a new one.",
+    "If the previous running sum is negative, starting fresh is always better."
+  ],
+  "commonMistakes": [
+    "Initializing maxSum to 0 instead of nums[0] — fails when all elements are negative.",
+    "Returning 0 for all-negative arrays — the answer should be the least negative element."
+  ],
+  "relatedProblems": ["002"],
+  "author": "chron303",
+  "contributed": "2026-04-23"
+}
